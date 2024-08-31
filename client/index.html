@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Replica Pavana Vamsi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="rules">
+      <h3>Game Rules</h3>
+      <ol>
+        <li>
+          <strong>Pawn:</strong> Moves one block in any direction (Left, Right,
+          Forward, or Backward).<br />
+        </li>
+        <li>
+          <strong>Hero1:</strong> Moves two blocks straight in any direction.
+          Kills any opponent's character in its path.<br />
+        </li>
+        <li>
+          <strong>Hero2:</strong> Moves two blocks diagonally in any
+          direction.Kills any opponent's character in its path.<br />
+        </li>
+      </ol>
+    </div>
+    <!-- <div id="container"> -->
+    <div id="game">
+      <h1>Mini Chess</h1>
+      <div id="board"></div>
+      <div id="controls">
+        <button id="resetButton">Reset</button>
+      </div>
+      <div id="status"></div>
+    </div>
+    <!-- </div> -->
+    <div id="move-history">
+      <h3>Move History</h3>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Player A</th>
+            <th>Player B</th>
+          </tr>
+        </thead>
+        <tbody id="moveHistoryTable"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
