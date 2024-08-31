@@ -1,4 +1,4 @@
-# Mini Chess Game
+# Mini Chess Game [Demo](https://mini-chess.onrender.com)
 
 ## Table of Contents
 
@@ -40,7 +40,7 @@ Before you begin, ensure you have the following installed on your local machine:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/Pvamsi02/Chillara-V-L-N-S-Pavana-Vamsi-21BCE5095.git
+   git clone https://github.com/Pvamsi02/Mini-Chess.git
    cd hitwicket-game
    ```
 
