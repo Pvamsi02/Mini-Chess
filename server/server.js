@@ -50,7 +50,7 @@ const server = http.createServer((req, res) => {
   });
 });
 
-const wss = new WebSocket.Server({ port: 8080 });
+const wss = new WebSocket.Server({ port: 3001 });
 
 let game = new GameLogic();
 
