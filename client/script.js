@@ -1,6 +1,6 @@
 console.log("Attempting to connect to WebSocket...");
 
-const ws = new WebSocket("ws://mini-chess.onrender.com:3000");
+const ws = new WebSocket("wss://mini-chess.onrender.com:3000");
 
 ws.onopen = () => {
   console.log("WebSocket connection established!");
