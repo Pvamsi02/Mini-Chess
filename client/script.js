@@ -1,6 +1,12 @@
 console.log("Attempting to connect to WebSocket...");
 
-const ws = new WebSocket("ws://localhost:3001");
+const serverAddress = "wss://mini-chess.onrender.com/";
+
+const ws = new WebSocket(serverAddress, {
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+  },
+});
 
 ws.onopen = () => {
   console.log("WebSocket connection established!");

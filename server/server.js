@@ -3,6 +3,7 @@ const WebSocket = require("ws");
 const fs = require("fs");
 const path = require("path");
 const GameLogic = require("./gamelogic");
+const PORT = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
   let filePath = path.join(
@@ -50,7 +51,7 @@ const server = http.createServer((req, res) => {
   });
 });
 
-const wss = new WebSocket.Server({ port: 3001 });
+const wss = new WebSocket.Server({ port: PORT });
 
 let game = new GameLogic();
 
@@ -98,6 +99,6 @@ function broadcast(data) {
   });
 }
 
-server.listen(3000, () => {
-  console.log("Server started on port 3000");
+server.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
 });
