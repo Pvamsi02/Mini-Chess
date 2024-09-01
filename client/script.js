@@ -1,12 +1,6 @@
 console.log("Attempting to connect to WebSocket...");
 
-const serverAddress = "wss://mini-chess.onrender.com/";
-
-const ws = new WebSocket(serverAddress, {
-  headers: {
-    "Access-Control-Allow-Origin": "*",
-  },
-});
+const ws = new WebSocket("ws://localhost:3000");
 
 ws.onopen = () => {
   console.log("WebSocket connection established!");
@@ -27,14 +21,10 @@ ws.onmessage = (event) => {
       updateMoveHistory(data.state.moveHistory);
       break;
     case "invalidMove":
-      document.getElementById("status1").innerText = "Invalid move.";
-      // alert(`Invalid Move: ${data.reason}`);
+      alert(`Invalid Move: ${data.reason}`);
       break;
     case "gameOver":
-      document.getElementById(
-        "status1"
-      ).innerText = `Game Over! Winner:${data.winner}.`;
-      // alert(`Game Over! Winner: ${data.winner}`);
+      alert(`Game Over! Winner: ${data.winner}`);
       break;
   }
 };
@@ -88,10 +78,8 @@ function handleCellClick(row, col) {
     if (cell.innerText && cell.innerText.startsWith(currentPlayer)) {
       selectedCell = [row, col];
       cell.classList.add("selected");
-      document.getElementById("status1").innerText = "Valid Selection.";
     } else {
-      document.getElementById("status1").innerText = "Invalid Selection.";
-      // alert("Invalid selection.");
+      alert("Invalid selection.");
     }
   }
 }
